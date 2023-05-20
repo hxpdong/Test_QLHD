@@ -20,7 +20,7 @@ class HopDongController extends Controller
             'id' => $id,
         ])[0];
 
-        $hoadons = DB::select("select * from hoadon where HOPDONG_ID=:id;",
+        $hoadons = DB::select("select * from hoadon where HOPDONG_ID=:id order by HOADON_ID desc;",
         [
             'id' => $hopdong->HOPDONG_ID,
         ]);

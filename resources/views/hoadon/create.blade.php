@@ -39,15 +39,15 @@
     Tổng tiền (VNĐ): 
     <input class="form-control" 
             type="text" name="tongtien" 
-            >
+            readonly>
     Tiền thuế (VNĐ): 
     <input class="form-control" 
             type="text" name="tienthue" 
-            >
+            readonly>
     Tổng tiền có thuế (VNĐ): 
     <input class="form-control" 
             type="text" name="tongtiencothue" 
-            >
+            readonly>
     Số tiền (bằng chữ): <input class="form-control" 
             type="text" name="sotienbangchu">
     Người tạo: <input class="form-control" 
@@ -88,7 +88,7 @@
                 <td><input type="text" name="soluong{{$i}}" ></td>
                 <td><input type="text" name="donvitinh{{$i}}" ></td>
                 <td><input type="text" name="dongia{{$i}}" ></td>
-                <td><input type="text" name="thanhtien{{$i}}" ></td>
+                <td><input type="text" name="thanhtien{{$i}}" readonly></td>
             </tr>
         @endfor     
     </table>

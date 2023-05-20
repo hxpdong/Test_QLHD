@@ -120,7 +120,7 @@ class HoaDonController extends Controller
         
         //return dd($newid->maxid);
         //$hoadon->save();
-        return redirect('/khachhang');
+        return redirect('/hopdong/'.$request->sohopdong);
         //return dd($idhopdong->HOPDONG_ID);
     }
 }
