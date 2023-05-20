@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <h1>Cập nhật thông tin Khách hàng</h1>
-
+<style>
+        form {
+                width: 25%;
+        }
+</style>
 <form action="/khachhang/{{$khhang->KHACHHANG_ID}}" method="post">
 @csrf
 @method('PUT')

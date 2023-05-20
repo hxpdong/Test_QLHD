@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoaiKhachHangsController;
 use App\Http\Controllers\KhachHangController;
+use App\Http\Controllers\HopDongController;
+use App\Http\Controllers\HoaDonController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +24,5 @@ Route::get('/', function () {
 Route::get('/', [LoaiKhachHangsController::class, 'index']);
 Route::resource('/loaikhachhangs', LoaiKhachHangsController::class);
 Route::resource('/khachhang', KhachHangController::class);
+Route::resource('/hopdong', HopDongController::class);
+Route::resource('/hoadon', HoaDonController::class);

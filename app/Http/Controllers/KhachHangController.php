@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\KhHang;
 use App\Models\KhachHang;
 use App\Models\TrangThaiKH;
+use App\Models\HopDong;
 use Carbon\Carbon;
 //use App\Http\Requests\CreateValidationRequest;
 
@@ -29,7 +30,15 @@ class KhachHangController extends Controller
             'id' => $id
         ]
         );
-        return view('khachhang.show')->with('khachhang', $khachhang);
+        $hopdongs = DB::select("select * from HOPDONG where KHACHHANG_ID=:id;",
+        [
+            'id' => $id
+        ]);
+        //return view('khachhang.show')->with('khachhang', $khachhang);
+        return view('khachhang.show', [
+            'khachhang' => $khachhang,
+            'hopdongs' => $hopdongs,
+        ]);
     }
 
     public function create() {

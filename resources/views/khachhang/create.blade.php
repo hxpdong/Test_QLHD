@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <h1>Thêm mới Khách hàng</h1>
-
+<style>
+        form {
+                width: 25%;
+        }
+</style>
 <form action="/khachhang" method="post">
 @csrf
 
